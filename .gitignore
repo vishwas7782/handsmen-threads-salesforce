@@ -1,0 +1,66 @@
+# ─────────────────────────────
+# Core Salesforce DX Files
+# ─────────────────────────────
+.sfdx/                   # Auth files and org settings
+.sf/                     # Secure auth files (newer CLI)
+auth/                   # If you manually store auth creds
+*.log                   # Any log files
+*.tmp                   # Temporary files
+
+# ─────────────────────────────
+# VS Code & Editor-Specific
+# ─────────────────────────────
+.vscode/                # VS Code settings
+.DS_Store               # Mac system file
+Thumbs.db               # Windows thumbnail cache
+
+# ─────────────────────────────
+# Node/JS/TS/Tooling (if using npm or JS components)
+# ─────────────────────────────
+node_modules/           # Node dependencies
+package-lock.json       # Lock file (optional — exclude if using npm)
+npm-debug.log           # NPM debug logs
+yarn.lock               # Yarn lock file (if using Yarn)
+
+# ─────────────────────────────
+# Test Coverage / Tooling
+# ─────────────────────────────
+coverage/               # Test coverage outputs
+jest.config.js          # Jest configuration (if applicable)
+*.test.js               # Test files
+*.test.ts               # TypeScript test files
+*.map                   # Source maps
+
+# ─────────────────────────────
+# Custom Tooling (based on your project)
+# ─────────────────────────────
+tools/                  # Custom tooling scripts
+typings/                # TypeScript typings, usually regenerated
+custom-components.json  # Likely tool-generated config
+indexes/                # Unclear — skip if tool-generated or temp
+
+# ─────────────────────────────
+# Git-related
+# ─────────────────────────────
+.gitignore              # Ignore the ignore file itself from changes
+*.swp                   # Swap files (e.g., Vim/other editors)
+
+# ─────────────────────────────
+# Build or Misc. Tooling
+# ─────────────────────────────
+dist/                   # Build outputs (if any)
+build/                  # Build folder
+.idea/                  # JetBrains IDE folder
+
+# ─────────────────────────────
+# Other Ignored Files
+# ─────────────────────────────
+.env                    # Local environment config
+*.bak                   # Backup files
+*.old                   # Old versions
+
+# ─────────────────────────────
+# Uncomment if Scratch Org Definition files shouldn't be tracked
+# ─────────────────────────────
+# config/
+# project-scratch-def.json
