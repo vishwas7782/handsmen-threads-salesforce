@@ -82,60 +82,60 @@ Salesforce Developer | B.Tech CSE | Passionate about CRM Solutions
 
 ### 🔄 Custom Objects: HandsMen Customer
 
-![Loyalty Flow](screenshots/handsmen_customer.png)
+![HandsMen Customer](screenshots/handsmen_customer.png)
 
 ---
 ### 🔄 Custom Objects: HandsMen Order
 
-![Loyalty Flow](screenshots/handsmen_order.png)
+![HandsMen Order](screenshots/handsmen_order.png)
 
 ---
 
 ### 🔄 Custom Objects: HandsMen Product
 
-![Loyalty Flow](screenshots/handsmen_product.png)
+![HandsMen Product](screenshots/handsmen_product.png)
 
 ---
 
 ### 🔄 Custom Objects: Inventory
 
-![Loyalty Flow](screenshots/inventory.png)
+![Inventory](screenshots/inventory.png)
 
 ---
 
 ### 🔄 Custom Objects: Marketing Campaign
 
-![Loyalty Flow](screenshots/marketing_compaign.png)
+![Marketing Campaign](screenshots/marketing_campaign.png)
 
 ---
 
 ### 🔄 Flow: Loyalty Status Update
 
-![Loyalty Flow](screenshots/loyalty_status_flow.png)
+![Loyalty Status Flow](screenshots/loyalty_status_flow.png)
 
 ---
 
 ### 🔄 Flow: Order Confirmation
 
-![Loyalty Flow](screenshots/order_confirmation_flow.png)
+![Order Confirmation Flow](screenshots/order_confirmation_flow.png)
 
 ---
 
 ### 🔄 Flow: Stock Alert
 
-![Loyalty Flow](screenshots/stock_alert_flow.png)
+![Stock Alert Flow](screenshots/stock_alert_flow.png)
 
 ---
 
 ### 🔄 Classic Email Template
 
-![Loyalty Flow](screenshots/classic_email_template.png)
+![Classic Email Template](screenshots/classic_email_template.png)
 
 ---
 
 ### 🔄 Developer Console
 
-![Loyalty Flow](screenshots/developer_console.png)
+![Developer Console](screenshots/developer_console.png)
 
 ---
 
