@@ -30,55 +30,54 @@ The primary objective of this project is to develop a robust CRM solution that a
 
 #### **Phase 1: Requirement Analysis & Planning**
 
-* **Business Requirements:** The primary need was to replace manual, disconnected processes with an integrated system. [cite_start]Key challenges included delayed order confirmations, manual tracking of customer loyalty, and reactive inventory management. [cite: 21]
-* [cite_start]**Project Scope:** The scope included the development of custom objects to model the business, implementation of automation for core workflows, creation of a user-friendly Lightning App, and setup of a security model to ensure data privacy. [cite: 22]
+* **Business Requirements:** The primary need was to replace manual, disconnected processes with an integrated system. Key challenges included delayed order confirmations, manual tracking of customer loyalty, and reactive inventory management.
+* **Project Scope:** The scope included the development of custom objects to model the business, implementation of automation for core workflows, creation of a user-friendly Lightning App, and setup of a security model to ensure data privacy. 
 * **Data Model Design:**
     * **Custom Objects:** `Customer`, `Order`, `Product`, `LoyaltyTier`, `Inventory`, and `Marketing Campaign`.
     * **Relationships:**
         * A lookup relationship from `Order` to `Customer` (One-to-many).
         * A lookup relationship from `Order` to `Product` (Many-to-one).
         * A one-to-one relationship between `Customer` and `LoyaltyTier`.
-* [cite_start]**Security Model Design:** A role hierarchy was established with profiles and permission sets to control access based on user roles (e.g., Sales Rep, Service Agent, Inventory Manager). [cite: 23, 38]
+* **Security Model Design:** A role hierarchy was established with profiles and permission sets to control access based on user roles (e.g., Sales Rep, Service Agent, Inventory Manager). 
 
 #### **Phase 2: Salesforce Development - Backend & Configurations**
 
-* [cite_start]**Environment Setup:** A developer sandbox was used for all development and configuration, with a DevOps workflow established for managing changes. [cite: 25]
+* **Environment Setup:** A developer sandbox was used for all development and configuration, with a DevOps workflow established for managing changes. 
 * **Customization:**
-    * [cite_start]**Objects & Fields:** Created custom objects and fields to store all necessary business data. [cite: 26]
-    * [cite_start]**Validation Rules:** Implemented to ensure data integrity, such as requiring a shipping address on orders before they can be marked as "Shipped." [cite: 26]
-* **Automation:**
+    * **Objects & Fields:** Created custom objects and fields to store all necessary business data.
+    * **Validation Rules:** Implemented to ensure data integrity, such as requiring a shipping address on orders before they can be marked as "Shipped." 
     * **Record-Triggered Flows:**
-        * [cite_start]`Order Confirmation Flow`: Sends an email to the customer upon order creation. [cite: 26]
+        * `Order Confirmation Flow`: Sends an email to the customer upon order creation. 
         * `Stock Alert Flow`: Triggers an alert when a product's inventory level falls below 5 units.
         * `Loyalty Status Update Flow`: Updates the customer's loyalty tier based on their total purchase amount.
-    * [cite_start]**Apex Triggers:** An Apex trigger on the `Order` object calculates the total purchase amount for a customer and updates a corresponding field on the `Customer` object, which in turn invokes the loyalty status flow. [cite: 27]
+    * **Apex Triggers:** An Apex trigger on the `Order` object calculates the total purchase amount for a customer and updates a corresponding field on the `Customer` object, which in turn invokes the loyalty status flow.
     * **Scheduled Apex:** A nightly batch job processes bulk orders, updates financial records, and adjusts inventory levels to ensure data consistency.
 
 #### **Phase 3: UI/UX Development & Customization**
 
-* [cite_start]**Lightning App:** A custom Lightning App named "HandsMen Threads" was created to provide users with a tailored interface containing all relevant tabs and components. [cite: 29]
-* [cite_start]**Page Layouts & Dynamic Forms:** Page layouts were optimized for different user profiles, and Dynamic Forms were used to show or hide fields based on record criteria, improving user experience. [cite: 30]
-* [cite_start]**User Management:** Users were set up with appropriate profiles and permission sets aligned with their roles. [cite: 31]
-* **Reports and Dashboards:** Created reports to track key metrics like "Sales by Product" and "Customer Loyalty Distribution." [cite_start]These were added to a central dashboard for at-a-glance insights. [cite: 32]
+* **Lightning App:** A custom Lightning App named "HandsMen Threads" was created to provide users with a tailored interface containing all relevant tabs and components.
+* **Page Layouts & Dynamic Forms:** Page layouts were optimized for different user profiles, and Dynamic Forms were used to show or hide fields based on record criteria, improving user experience. 
+* **User Management:** Users were set up with appropriate profiles and permission sets aligned with their roles. 
+* **Reports and Dashboards:** Created reports to track key metrics like "Sales by Product" and "Customer Loyalty Distribution." These were added to a central dashboard for at-a-glance insights. 
 
 #### **Phase 4: Data Migration, Testing & Security**
 
-* [cite_start]**Data Loading:** Initial data for products and customers was loaded using the Data Import Wizard. [cite: 36]
+* **Data Loading:** Initial data for products and customers was loaded using the Data Import Wizard. 
 * **Data Integrity:**
-    * [cite_start]**Field History Tracking:** Enabled on key fields to monitor changes. [cite: 37]
-    * [cite_start]**Duplicate Rules:** Set up on the `Customer` object to prevent duplicate records based on email and phone number. [cite: 37]
+    * **Field History Tracking:** Enabled on key fields to monitor changes. 
+    * **Duplicate Rules:** Set up on the `Customer` object to prevent duplicate records based on email and phone number. 
 * **Security Implementation:**
-    * [cite_start]**Profiles & Permission Sets:** Configured to grant the principle of least privilege. [cite: 38]
-    * [cite_start]**Sharing Rules:** Created to extend access to records where needed, beyond the organization-wide defaults. [cite: 38]
+    * **Profiles & Permission Sets:** Configured to grant the principle of least privilege. 
+    * **Sharing Rules:** Created to extend access to records where needed, beyond the organization-wide defaults. 
 * **Testing:**
-    * [cite_start]**Test Classes:** Apex test classes were written to ensure all triggers and batch jobs work as expected, with code coverage exceeding 85%. [cite: 39]
-    * [cite_start]**Manual Testing:** Test cases were executed for all flows, validation rules, and approval processes, with screenshots documenting the input and expected output. [cite: 41, 54]
+    * **Test Classes:** Apex test classes were written to ensure all triggers and batch jobs work as expected, with code coverage exceeding 85%. 
+    * **Manual Testing:** Test cases were executed for all flows, validation rules, and approval processes, with screenshots documenting the input and expected output. 
 
 #### **Phase 5: Deployment, Documentation & Maintenance**
 
-* [cite_start]**Deployment:** Change Sets were used to deploy all components from the developer sandbox to the production environment. [cite: 43]
-* [cite_start]**Maintenance:** A maintenance plan includes regular monitoring of system performance, checking for errors in automated processes, and making iterative improvements based on user feedback. [cite: 44]
-* [cite_start]**Troubleshooting:** A guide was documented for common issues, such as troubleshooting Flow errors by reviewing debug logs and email alerts. [cite: 45]
+* **Deployment:** Change Sets were used to deploy all components from the developer sandbox to the production environment. 
+* **Maintenance:** A maintenance plan includes regular monitoring of system performance, checking for errors in automated processes, and making iterative improvements based on user feedback. 
+* **Troubleshooting:** A guide was documented for common issues, such as troubleshooting Flow errors by reviewing debug logs and email alerts.
 
 ---
 
@@ -106,19 +105,19 @@ The primary objective of this project is to develop a robust CRM solution that a
 
 ### **6. Testing Approach**
 
-[cite_start]Testing was conducted rigorously at multiple levels. [cite: 54] [cite_start]Unit testing was performed using Apex Test Classes to validate backend logic. [cite: 39] [cite_start]Functional testing was carried out manually for all user-facing features, including flows, validation rules, and page layouts, following predefined test cases. [cite: 41] User Acceptance Testing (UAT) was simulated to ensure the application meets business requirements from an end-user perspective.
+Testing was conducted rigorously at multiple levels. Unit testing was performed using Apex Test Classes to validate backend logic. Functional testing was carried out manually for all user-facing features, including flows, validation rules, and page layouts, following predefined test cases. User Acceptance Testing (UAT) was simulated to ensure the application meets business requirements from an end-user perspective.
 
 ### **7. Future Enhancements**
 
-* [cite_start]**Chatbot Integration:** Integrate an Einstein Bot on the website to handle common customer queries and assist with order tracking. [cite: 55]
-* [cite_start]**AI-Powered Recommendations:** Implement Einstein Next Best Action to provide sales reps with intelligent product recommendations for customers. [cite: 55]
-* [cite_start]**LWC Components:** Develop custom Lightning Web Components for a more interactive and dynamic user experience on key pages. [cite: 33, 112]
+* **Chatbot Integration:** Integrate an Einstein Bot on the website to handle common customer queries and assist with order tracking.
+* **AI-Powered Recommendations:** Implement Einstein Next Best Action to provide sales reps with intelligent product recommendations for customers.
+* **LWC Components:** Develop custom Lightning Web Components for a more interactive and dynamic user experience on key pages. 
 
 ---
 
 ### **9. Conclusion**
 
-The HandsMen Threads Salesforce CRM project successfully delivers a scalable and automated solution that meets the core business objectives. By centralizing data, automating key workflows, and providing robust analytics, the application empowers the team to operate more efficiently and build stronger customer relationships. [cite_start]This project serves as a strong foundation for future growth and innovation. [cite: 46]
+The HandsMen Threads Salesforce CRM project successfully delivers a scalable and automated solution that meets the core business objectives. By centralizing data, automating key workflows, and providing robust analytics, the application empowers the team to operate more efficiently and build stronger customer relationships. This project serves as a strong foundation for future growth and innovation.
 
 ---
 
